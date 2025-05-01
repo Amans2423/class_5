@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Class 5 - Computer Holiday Homework</title>
   <style>
     body {
@@ -89,9 +89,21 @@
     p {
       margin-top: 10px;
     }
+    .top-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #1976d2;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      padding: 10px 15px;
+      font-size: 18px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
   </style>
 </head>
-
 <body>
 
 <div class="lock-screen" id="lockScreen">
@@ -104,26 +116,71 @@
 <h1>📚 Summer Holiday Homework (Class 5 – Computer: Memory and Storage)</h1>
 
 <div class="question">
-  <h2>1️⃣ How does a Computer Store Information?</h2>
-  <p>💬 A computer stores information in its <b>memory</b>, just like we store things in our school bag.</p>
-  <p class="emoji">🎯 <b>Simple Example:</b></p>
+  <h2>1️⃣ How Does a Computer Store Information?</h2>
+
+  <p><b>💡 Step-by-Step Story:</b></p>
+  <p>Imagine you are writing a story. When you are writing on a notebook placed on your table, it’s easy to work — but if someone takes your notebook away, your work is gone unless you saved it. A computer works the same way.</p>
+
+  <h3>🔶 What is Information?</h3>
+  <p>Anything you type, draw, or save on a computer is called <b>information</b>. The computer needs a place to store it. That’s where memory comes in!</p>
+
+  <h3>📦 Two Types of Computer Memory:</h3>
   <ul>
-    <li>When you save a photo, song, or document, the computer keeps it safe inside its memory.</li>
-    <li>It remembers where you saved it (like in a folder).</li>
+    <li><b>RAM (Random Access Memory):</b> Temporary working memory. It's very fast, but forgets everything when the computer is turned off.</li>
+    <li><b>Hard Disk:</b> Permanent storage. It keeps your files safe even after shutdown.</li>
   </ul>
-  <p class="emoji">🔍 <b>Little Technical (Easy to Understand):</b></p>
+
+  <h3>🧪 Real Life Comparison:</h3>
   <ul>
-    <li>When we create something on a computer (like typing a letter or making a drawing), it is first kept in the computer’s working memory called <b>RAM</b>.</li>
-    <li>But RAM is temporary. So, when we click "Save", the information moves to <b>Secondary Memory</b> like the <b>Hard Disk</b>.</li>
-    <li>Hard Disk stores the data permanently, even after the computer is switched off.</li>
+    <li><b>RAM = Study Table:</b> Books on the table help you study quickly, but they don’t stay there forever.</li>
+    <li><b>Hard Disk = School Bag:</b> You store your books here to carry and use them later.</li>
   </ul>
-  <p class="emoji">🧠 <b>Real Life Example:</b></p>
+
+  <h3>🧠 Think Like This:</h3>
   <ul>
-    <li>RAM is like your study table — books are kept temporarily while you study.</li>
-    <li>Hard Disk is like your school bag — you store your books there to carry them safely.</li>
+    <li>You open MS Paint and start drawing. That drawing is kept in RAM.</li>
+    <li>If you shut down without saving — drawing is lost. ❌</li>
+    <li>When you click SAVE — drawing is sent to Hard Disk. ✅</li>
   </ul>
-  <p class="emoji">🎥 <b>Tip:</b> Record a video explaining saving a file, and mention RAM and Hard Disk simply.</p>
-  <p><b>📢 Note:</b> If you are unable to record a video, you can explain it orally.</p>
+
+  <h3>📊 Memory Comparison Table:</h3>
+  <table>
+    <tr>
+      <th>Memory Type</th>
+      <th>Speed</th>
+      <th>Power Off Safe?</th>
+      <th>Used For</th>
+    </tr>
+    <tr>
+      <td>RAM (Primary)</td>
+      <td>Very Fast</td>
+      <td>No ❌</td>
+      <td>Working memory</td>
+    </tr>
+    <tr>
+      <td>Hard Disk (Secondary)</td>
+      <td>Slower</td>
+      <td>Yes ✅</td>
+      <td>Permanent saving</td>
+    </tr>
+  </table>
+
+  <h3>🕹️ Other Storage Devices:</h3>
+  <ul>
+    <li>Pendrive – small and portable</li>
+    <li>CD – round and shiny disk</li>
+    <li>SSD – super fast storage used in new laptops</li>
+  </ul>
+
+  <h3>🎥 Activity:</h3>
+  <p>Record a video explaining saving a file. Show what happens before and after clicking SAVE.</p>
+
+  <h3>🎯 Summary:</h3>
+  <ul>
+    <li>Computer uses RAM to work fast, but it's temporary.</li>
+    <li>It stores information permanently in Hard Disk or similar devices.</li>
+    <li>ALWAYS save your work before turning off the computer.</li>
+  </ul>
 </div>
 
 <div class="question">
@@ -158,16 +215,18 @@
   <p><b>📢 Note:</b> Use proper labeling and headings for each device.</p>
 </div>
 
+<button onclick="window.scrollTo({ top: 0, behavior: 'smooth' });" class="top-button">↑</button>
+
 <script>
   function checkPassword() {
-    const correctPassword = "besmart"; // Apna password yaha set karo
+    const correctPassword = "besmart";
     const enteredPassword = document.getElementById("passwordInput").value;
     const errorMsg = document.getElementById("errorMsg");
 
     if (enteredPassword === correctPassword) {
       document.getElementById("lockScreen").style.display = "none";
     } else {
-      errorMsg.textContent = "❌ Incorrect Passkey! Reload the page again.";
+      errorMsg.textContent = "❌ Incorrect Passkey! Reloading...";
       setTimeout(() => {
         location.reload();
       }, 2000);
